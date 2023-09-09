@@ -15,7 +15,8 @@ This project is a simple Kanban board web application designed to help organize 
 
 ## Usage
 
-- Create tasks by clicking the "+" button in the corresponding column.
+- Create tasks by clicking the "+ Add Task" button in the corresponding column.
+- Add description of the tasks.
 - Edit tasks by clicking on the task name.
 - Move tasks between columns by dragging and dropping.
 
