@@ -20,4 +20,4 @@ This project is a simple Kanban board web application designed to help organize 
 - Edit tasks by clicking on the task name.
 - Move tasks between columns by dragging and dropping.
 
-[image](https://github.com/bindiya-amin/kanban-board/assets/129742360/9c02e85d-4db2-4c09-8563-323bac80042f)
+![image](https://github.com/bindiya-amin/kanban-board/assets/129742360/1797606d-d84e-42d3-aa09-3e8766b92a12)
