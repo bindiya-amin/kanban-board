@@ -15,20 +15,36 @@ body {
     margin: 0;
 }
 
+h2 {
+    text-align: center;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 50px; /* Adjust the margin-top value to center vertically */
+    color: #f85276;
+    background-color: rgba(198, 245, 246, 0.7);
+    border-radius: 40px;
+}
+
 .kanban-board {
     display: flex;
-    flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
     justify-content: center;
     padding: 20px;
 }
 
 .column {
-    flex: 1; /* Adjust the flex value for responsiveness */
-    margin: 10px;
+    flex: 1;
+    margin-top: 500px;
+    margin: 0 10px;
     padding: 10px;
     background-color: rgba(255, 0, 0, 0.3);
     border-radius: 30px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#todo, #doing, #done {
+    display: flex;
+    flex-direction: column;
 }
 
 .column h3 {
@@ -39,8 +55,9 @@ body {
     color: brown;
     background-color: #f3f879;
     border-radius: 10px;
-    padding: 5px;
-    text-align: center;
+    width: 70px;
+    height: 30px;
+    padding: 2px;
 }
 
 .tasks {
@@ -64,7 +81,7 @@ body {
     border: none;
     border-radius: 15px;
     cursor: pointer;
-    width: 100%;
+    width: 100px;
     height: 50px;
     font-size: 16px;
     align-items: start;
@@ -86,11 +103,12 @@ body {
 
 .task-buttons {
     display: flex;
-    justify-content: space-between; /* Center buttons on small screens */
+    justify-content: flex-end;
     margin-top: 10px;
 }
 
 .task-buttons button {
+    margin-left: 5px;
     background-color: #8af526ea;
     color: #1b1a1a;
     border: none;
@@ -107,21 +125,15 @@ body {
 
 .task span {
     font-size: 16px;
-    display: block;
-    text-align: center;
-    margin-bottom: 5px;
 }
 
 .task textarea {
     width: 100%;
-    height: 200px; /* Fixed height for the text area */
     margin-top: 10px;
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    resize: none; /* Prevent resizing of the text area */
-    overflow-y: auto; /* Add vertical scrollbar if needed */
-    font-size: 20px;
+    display: none;
 }
 
 /* Description modal style */
@@ -159,13 +171,13 @@ body {
 
 #description-textarea {
     width: 100%;
-    height: 200px; /* Fixed height for the text area */
+    height: 200px;
     margin-top: 10px;
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    resize: none; /* Prevent resizing of the text area */
-    overflow-y: auto; /* Add vertical scrollbar if needed */
+    resize: none;
+    overflow-y: auto;
     font-size: 20px;
 }
 
@@ -184,4 +196,17 @@ body {
 
 #save-description-button:hover {
     background-color: #0056b3;
+}
+
+/* Responsive Styles */
+
+@media screen and (max-width: 768px) {
+    .kanban-board {
+        flex-direction: column;
+    }
+
+    .column {
+        flex: 1;
+        margin: 10px 0;
+    }
 }
