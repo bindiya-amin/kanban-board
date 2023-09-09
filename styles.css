@@ -1,0 +1,187 @@
+/* Basic reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    margin: 0;
+}
+
+.kanban-board {
+    display: flex;
+    flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+    justify-content: center;
+    padding: 20px;
+}
+
+.column {
+    flex: 1; /* Adjust the flex value for responsiveness */
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(255, 0, 0, 0.3);
+    border-radius: 30px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.column h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: brown;
+    background-color: #f3f879;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+}
+
+.tasks {
+    min-height: 50px;
+    margin-top: 10px;
+}
+
+.task-input {
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.add-task {
+    display: block;
+    background-color: #fb0b7f;
+    color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    align-items: start;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.add-task:hover {
+    background-color: #0056b3;
+}
+
+.task {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 15px;
+    position: relative;
+}
+
+.task-buttons {
+    display: flex;
+    justify-content: space-between; /* Center buttons on small screens */
+    margin-top: 10px;
+}
+
+.task-buttons button {
+    background-color: #8af526ea;
+    color: #1b1a1a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 14px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.task-buttons button:hover {
+    background-color: #ed8de0;
+}
+
+.task span {
+    font-size: 16px;
+    display: block;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.task textarea {
+    width: 100%;
+    height: 200px; /* Fixed height for the text area */
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none; /* Prevent resizing of the text area */
+    overflow-y: auto; /* Add vertical scrollbar if needed */
+    font-size: 20px;
+}
+
+/* Description modal style */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    max-height: 400px;
+    position: relative;
+    box-shadow: 0px 0px 10px 0px #000;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+}
+
+#description-textarea {
+    width: 100%;
+    height: 200px; /* Fixed height for the text area */
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none; /* Prevent resizing of the text area */
+    overflow-y: auto; /* Add vertical scrollbar if needed */
+    font-size: 20px;
+}
+
+#save-description-button {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #fb0b7f;
+    color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#save-description-button:hover {
+    background-color: #0056b3;
+}
